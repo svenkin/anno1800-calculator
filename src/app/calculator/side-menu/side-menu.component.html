@@ -1,0 +1,55 @@
+<nav class="panel">
+  <form novalidate #form>
+    <p class="panel-heading">
+      Old World
+    </p>
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Farmers.png" class="workforce-icon" alt="Farmers">
+      <div class="control">
+        <input class="input" type="number" placeholder="Farmers" [(ngModel)]="workforce.farmers" name="farmers" min="0" step="10">
+      </div>
+    </div>
+
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Workers.png" class="workforce-icon" alt="Workers">
+      <div class="control">
+        <input class="input" type="number" placeholder="Workers" [(ngModel)]="workforce.workers" name="workers" min="0" step="10">
+      </div>
+    </div>
+
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Artisans.png" class="workforce-icon" alt="Artisans">
+      <div class="control">
+        <input class="input" type="number" placeholder="Artisans" [(ngModel)]="workforce.artisans" name="artisans" min="0" step="10">
+      </div>
+    </div>
+
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Engineers.png" class="workforce-icon" alt="Engineers">
+      <div class="control">
+        <input class="input" type="number" placeholder="Engineers" [(ngModel)]="workforce.engineers" name="engineers" min="0" step="20">
+      </div>
+    </div>
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Investors.png" class="workforce-icon" alt="Investors">
+      <div class="control">
+        <input class="input" type="number" placeholder="Investors" [(ngModel)]="workforce.investors" name="investors" min="0" step="30">
+      </div>
+    </div>
+    <p class="panel-heading">
+      New World
+    </p>
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Jornaleros.png" class="workforce-icon" alt="">
+      <div class="control">
+        <input class="input" type="number" placeholder="Jornaleros" min="0" step="40">
+      </div>
+    </div>
+    <div class="panel-block is-active">
+      <img src="assets/images/workforce/Obreros.png" class="workforce-icon" alt="">
+      <div class="control">
+        <input class="input" type="number" placeholder="Obreros" min="0" step="50">
+      </div>
+    </div>
+  </form>
+</nav>

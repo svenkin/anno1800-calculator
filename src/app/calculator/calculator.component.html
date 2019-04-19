@@ -4,7 +4,12 @@
   </div>
   <div class="column is-three-quarters">
     <div class="consumptions">
-      <app-goods *ngFor="let dataSet of consumptionData" [data]="dataSet"></app-goods>
+      <ng-container *ngIf="consumptionData.length > 0; else emptyGoods">
+        <app-goods *ngFor="let dataSet of consumptionData" [data]="dataSet"></app-goods>
+      </ng-container>
+      <ng-template #emptyGoods>
+        No Goods needed
+      </ng-template>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import {NeedModel} from "./need.model";
 
-export class EngineerModel {
+export class InvestorModel {
   public static needs: Array<NeedModel> = [
     {
       name: 'Glasses',
@@ -19,53 +19,57 @@ export class EngineerModel {
       name: 'Light Bulbs',
       consumption: 0.0003124995,
       influx: 2,
-      iconPath: 'assets/images/goods/Light_bulb.png'
+      iconPath: 'assets/images/goods/Light_bulbs.png'
     },
     {
-      name: 'Canned Food',
-      consumption: 0.00034188,
-      influx: 4,
-      income: [7, 7],
-      iconPath: 'assets/images/goods/Canned_food.png'
-    },
-    {
-      name: 'Sewing Machines',
-      consumption: 0.00095238,
+      name: 'Champagne',
+      consumption: 0.0004704,
       influx: 2,
-      income: [15, 13],
-      iconPath: 'assets/images/goods/Sewing_machine.png'
+      iconPath: 'assets/images/goods/Champagne.png'
     },
     {
-      name: 'Fur Coats',
-      consumption: 0.000888888,
+      name: 'Cigars',
+      consumption: 0.000444444,
+      influx: 2,
+      iconPath: 'assets/images/goods/Cigars.png'
+    },
+    {
+      name: 'Chocolate',
+      consumption: 0.0010666668,
       influx: 2,
       income: [22],
-      iconPath: 'assets/images/goods/Fur_Coats.png'
+      iconPath: 'assets/images/goods/Chocolate.png'
     },
     {
-      name: 'University',
+      name: 'Steam Carriages',
       influx: 2,
-      iconPath: 'assets/images/buildings/University.png'
+      consumption: 0.000133332,
+      iconPath: 'assets/images/goods/Steam_carriages.png'
     },
     {
-      name: 'Variety Theatre',
-      income: [7, 7],
-      iconPath: 'assets/images/buildings/Variety_theatre.png'
+      name: 'Club House',
+      iconPath: 'assets/images/buildings/Club_house.png'
     },
     {
       name: 'High Wheelers',
       consumption: 0.0006250005,
       happiness: 5,
       populationRequirement: 500,
-      iconPath: 'assets/images/goods/High_wheeler.png'
+      iconPath: 'assets/images/goods/High_Wheelers.png'
     },
     {
-      name: 'Rum',
-      consumption: 0.001904762,
-      income: [22],
+      name: 'Jewelry',
+      consumption: 0.0004210524,
+      happiness: 2,
+      populationRequirement: 1750,
+      iconPath: 'assets/images/goods/Jewelry.png'
+    },
+    {
+      name: 'Gramophones',
+      consumption: 0.00010524	,
       happiness: 4,
-      populationRequirement: 500,
-      iconPath: 'assets/images/goods/Rum.png'
+      populationRequirement: 3000,
+      iconPath: 'assets/images/goods/Gramophone.png'
     },
     {
       name: 'Bank',
@@ -78,7 +82,7 @@ export class EngineerModel {
       consumption: 0.0001960785,
       happiness: 3,
       populationRequirement: 1000,
-      iconPath: 'assets/images/goods/Pocket_watch.png'
+      iconPath: 'assets/images/goods/Pocket_Watches.png'
     }
   ];
 

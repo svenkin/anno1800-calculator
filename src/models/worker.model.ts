@@ -66,7 +66,7 @@ export class WorkerModel {
       income: [13, 11],
       happiness: 3,
       populationRequirement: 500,
-      iconPath: 'assets/images/goods/Schnapps.png'
+      iconPath: 'assets/images/goods/Beer.png'
     },
     {
       name: 'Church',

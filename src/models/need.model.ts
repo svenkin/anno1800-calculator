@@ -28,3 +28,29 @@ export class NeedModel {
    */
   iconPath?: string;
 }
+// TODO use constants for needs
+export class Need {
+  public readonly FISH: NeedModel = {
+    name: 'Fish',
+    consumption: 0.0025000002,
+    influx: 3,
+    income: [1, 1],
+    populationRequirement: 50,
+    iconPath: 'assets/images/goods/Fish.png'
+  };
+  public readonly WORK_CLOTHES: NeedModel = {
+    name: 'Work Clothes',
+    consumption: 0.003076926,
+    influx: 3,
+    income: [4, 3],
+    populationRequirement: 150,
+    iconPath: 'assets/images/goods/Work_clothes.png'
+  };
+  public readonly SCHNAPPS: NeedModel = {
+    name: 'Schnapps',
+    consumption: 0.003333336,
+    income: [1, 1],
+    populationRequirement: 100,
+    iconPath: 'assets/images/goods/Schnapps.png'
+  };
+}

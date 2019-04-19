@@ -5,8 +5,7 @@ import {appRoutes} from './app.routes';
 import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
-import {RouterModule} from "@angular/router";
-import {CalculatorModule} from "./calculator/calculator.module";
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,8 +13,8 @@ import {CalculatorModule} from "./calculator/calculator.module";
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+    RouterModule.forRoot(appRoutes, {useHash: true}),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {CalculatedNeed} from '../calculator.component';
 
 @Component({
   selector: 'app-goods',
@@ -6,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./goods.component.scss']
 })
 export class GoodsComponent implements OnInit {
-  @Input() data: any;
+  @Input() data: CalculatedNeed;
 
   constructor() {
   }

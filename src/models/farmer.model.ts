@@ -34,7 +34,7 @@ export class FarmerModel {
       name: 'Pub',
       income: [1, 1],
       populationRequirement: 150,
-      iconPath: 'assets/images/buildings/Marketplace.png'
+      iconPath: 'assets/images/buildings/Pub.png'
     }
   ];
   constructor(){}

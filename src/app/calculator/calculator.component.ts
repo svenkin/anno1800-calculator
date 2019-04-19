@@ -1,9 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {WorkforceData} from "./side-menu/side-menu.component";
-import {FarmerModel} from "../../models/farmer.model";
-import {NeedModel} from "../../models/need.model";
-import {CalculatorService} from "./calculator.service";
-import {WorkerModel} from "../../models/worker.model";
+import {WorkforceData} from './side-menu/side-menu.component';
+import {FarmerModel} from '../../models/farmer.model';
+import {NeedModel} from '../../models/need.model';
+import {CalculatorService, FullFilledState} from './calculator.service';
+import {WorkerModel} from '../../models/worker.model';
+import {ArtisanModel} from '../../models/artisan.model';
+import {EngineerModel} from '../../models/engineer.model';
+import {InvestorModel} from '../../models/investor.model';
 
 @Component({
   selector: 'app-calculator',
@@ -19,15 +22,25 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit() {
     FarmerModel.needs.forEach((need: NeedModel) => {
-      this.aggregateNeeds(need, 'farmers')
+      this.aggregateNeeds(need, 'farmers');
     });
     WorkerModel.needs.forEach((need: NeedModel) => {
-      this.aggregateNeeds(need, 'workers')
+      this.aggregateNeeds(need, 'workers');
+    });
+    ArtisanModel.needs.forEach((need: NeedModel) => {
+      this.aggregateNeeds(need, 'artisans');
+    });
+    EngineerModel.needs.forEach((need: NeedModel) => {
+      this.aggregateNeeds(need, 'engineers');
+    });
+    InvestorModel.needs.forEach((need: NeedModel) => {
+      this.aggregateNeeds(need, 'investors');
     });
     for (let key in this.aggregatedNeeds) {
-      this.aggregatedNeeds[key].workforce = Object.keys(this.aggregatedNeeds[key].workforce);
+      if (this.aggregatedNeeds.hasOwnProperty(key)) {
+        this.aggregatedNeeds[key].workforce = Object.keys(this.aggregatedNeeds[key].workforce);
+      }
     }
-    console.log(this.aggregatedNeeds)
   }
 
   public calculate(data: WorkforceData) {
@@ -39,8 +52,8 @@ export class CalculatorComponent implements OnInit {
         need.workforce.forEach((el) => {
           consumption += data[el];
         });
-        if (need.consumption) {
-          this.consumptionData.push(this.calculateConsumption(need, consumption))
+        if (need.consumption && consumption > 0) {
+          this.consumptionData.push(this.calculateConsumption(need, consumption));
         }
       }
     }
@@ -69,6 +82,14 @@ export class CalculatorComponent implements OnInit {
       iconPath: need.iconPath,
       buildingsNeed,
       fulfilled: this.calculatorService.isfullfilled((totalConsumption / buildingsNeed) * 100)
-    }
+    };
   }
+}
+
+export class CalculatedNeed {
+  consumption: number;
+  name: string;
+  iconPath: string;
+  buildingsNeed: number;
+  fulfilled: FullFilledState;
 }

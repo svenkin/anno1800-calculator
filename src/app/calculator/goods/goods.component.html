@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [style.border-left-color]="data?.fulfilled.color">
   <div class="card-content">
     <div class="media">
       <div class="media-left">
@@ -7,12 +7,13 @@
         </figure>
       </div>
       <div class="media-content">
-        <p class="title is-4">{{data?.name}}</p>
+        <p class="title is-6">{{data?.name}}</p>
       </div>
     </div>
-
+    <hr class="card-divider">
     <div class="content">
-      {{data?.consumption}}
+      <span class="consumption-need">{{data?.consumption}} <span class="consumption-unit">t/min</span></span>
+      <span class="buildings-need">{{data?.buildingsNeed}}</span>
     </div>
   </div>
 </div>

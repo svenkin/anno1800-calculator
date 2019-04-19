@@ -21,8 +21,8 @@ export class SideMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ngForm.valueChanges.subscribe(() => {
-      this.workforceUpdate.emit(this.workforce);
+    this.ngForm.valueChanges.subscribe((data: WorkforceData) => {
+      this.workforceUpdate.emit(data);
     })
   }
 }

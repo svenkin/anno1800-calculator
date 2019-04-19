@@ -3,7 +3,9 @@
     <app-side-menu (workforceUpdate)="calculate($event)"></app-side-menu>
   </div>
   <div class="column is-three-quarters">
-    <app-goods *ngFor="let dataSet of consumptionData" [data]="dataSet"></app-goods>
+    <div class="consumptions">
+      <app-goods *ngFor="let dataSet of consumptionData" [data]="dataSet"></app-goods>
+    </div>
   </div>
 </div>
 

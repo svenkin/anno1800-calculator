@@ -5,7 +5,8 @@ import {RouterModule} from "@angular/router";
 import {calculatorRoutes} from "./calculator.routes";
 import {SideMenuComponent} from "./side-menu/side-menu.component";
 import {FormsModule} from "@angular/forms";
-import { GoodsComponent } from './goods/goods.component';
+import {GoodsComponent} from './goods/goods.component';
+import {CalculatorService} from "./calculator.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,10 @@ import { GoodsComponent } from './goods/goods.component';
     RouterModule.forChild(calculatorRoutes),
     FormsModule
   ],
-  exports:[RouterModule]
+  providers: [
+    CalculatorService
+  ],
+  exports: [RouterModule]
 })
 export class CalculatorModule {
 }

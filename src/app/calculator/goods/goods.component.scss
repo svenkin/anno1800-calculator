@@ -1,8 +1,39 @@
 :host {
-  width: 300px;
-  display: inline-block;
+  display: flex;
+  flex: 0 0 25%;
+  padding: 5px;
+
+  .card {
+    width: 100%;
+    border-left-style: inset;
+    border-left-width: 2px;
+  }
+
+  .consumption-unit {
+    font-size: 11px;
+  }
+
+  .buildings-need {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .consumption-need {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .card-divider {
+    margin: 10px 0;
+  }
 
   .card-content {
     padding: 10px;
+
+    .media {
+      margin-bottom: 0;
+    }
   }
 }

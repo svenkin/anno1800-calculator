@@ -13,8 +13,8 @@ import {RouterModule} from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, {useHash: true}),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    RouterModule.forRoot(appRoutes),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

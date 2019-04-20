@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1555675924902,
-  "index": "./index.html",
+  "timestamp": 1555752084239,
+  "index": "/./index.html",
   "assetGroups": [
     {
       "name": "app",

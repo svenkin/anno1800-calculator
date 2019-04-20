@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build:prod": "ng build --prod && rm -rf docs/ && mkdir docs && xcopy \"dist\\anno1800-calculator\" \"docs\"/s\n ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

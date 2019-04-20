@@ -7,6 +7,8 @@ import {WorkerModel} from '../../models/worker.model';
 import {ArtisanModel} from '../../models/artisan.model';
 import {EngineerModel} from '../../models/engineer.model';
 import {InvestorModel} from '../../models/investor.model';
+import {JornalerosModel} from '../../models/jornaleros .model';
+import {ObrerosModel} from '../../models/obreros.model';
 
 @Component({
   selector: 'app-calculator',
@@ -35,6 +37,12 @@ export class CalculatorComponent implements OnInit {
     });
     InvestorModel.needs.forEach((need: NeedModel) => {
       this.aggregateNeeds(need, 'investors');
+    });
+    JornalerosModel.needs.forEach((need: NeedModel) => {
+      this.aggregateNeeds(need, 'jornaleros');
+    });
+    ObrerosModel.needs.forEach((need: NeedModel) => {
+      this.aggregateNeeds(need, 'obreros');
     });
     for (let key in this.aggregatedNeeds) {
       if (this.aggregatedNeeds.hasOwnProperty(key)) {

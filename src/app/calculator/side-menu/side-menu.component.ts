@@ -12,7 +12,9 @@ export class SideMenuComponent implements OnInit {
     workers: 0,
     artisans: 0,
     engineers: 0,
-    investors: 0
+    investors: 0,
+    jornaleros: 0,
+    obreros: 0
   };
   @Output() workforceUpdate = new EventEmitter();
   @ViewChild(NgForm) ngForm: NgForm;
@@ -33,4 +35,6 @@ export interface WorkforceData {
   artisans: number;
   engineers: number;
   investors: number;
+  jornaleros: number;
+  obreros: number;
 }
